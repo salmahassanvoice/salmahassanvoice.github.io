@@ -1,0 +1,108 @@
+/* ===================================
+   Salma Hassan - Arabic RTL Overrides
+   =================================== */
+
+body.rtl {
+    direction: rtl;
+    font-family: 'Cairo', 'Raleway', sans-serif;
+}
+
+body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5, body.rtl h6 {
+    font-family: 'Amiri', 'Playfair Display', serif;
+}
+
+body.rtl .hero-tagline {
+    font-family: 'Amiri', 'Playfair Display', serif;
+}
+
+/* Top Bar */
+body.rtl .top-bar-left { flex-direction: row-reverse; }
+body.rtl .top-bar-left a { flex-direction: row-reverse; }
+body.rtl .top-bar-content { flex-direction: row-reverse; }
+
+/* Navigation */
+body.rtl .nav-container { flex-direction: row-reverse; }
+body.rtl .nav-links { flex-direction: row-reverse; }
+body.rtl .nav-right { flex-direction: row-reverse; }
+body.rtl .nav-logo { flex-direction: row-reverse; }
+
+body.rtl .nav-link::after { left: auto; right: 0; }
+
+/* Hero */
+body.rtl .hero-content { direction: rtl; }
+body.rtl .hero-text { text-align: right; }
+body.rtl .hero-cta { justify-content: flex-start; }
+body.rtl .hero-description { margin-left: auto; margin-right: 0; max-width: 460px; }
+body.rtl .wave-bars { right: auto; left: -30px; }
+
+/* Demos */
+body.rtl .demos-layout { direction: rtl; }
+body.rtl .demos-frame { left: auto; right: 15px; }
+body.rtl .demos-frame::after { right: auto; left: -8px; clip-path: polygon(100% 0, 0 100%, 0 0); }
+body.rtl .demo-card { border-left: none; border-right: 3px solid var(--teal-light); }
+body.rtl .demo-card:hover { border-right-color: var(--orange-mid); border-left-color: transparent; }
+body.rtl .demo-subtitle { text-align: right; }
+body.rtl .play-btn i { margin-left: 0; margin-right: 2px; }
+body.rtl .play-btn.playing i { margin-right: 0; }
+
+/* About */
+body.rtl .about-grid { direction: rtl; }
+body.rtl .about-content .section-tag,
+body.rtl .about-content .section-title { text-align: right; }
+body.rtl .about-content { text-align: right; }
+body.rtl .about-frame { left: auto; right: 15px; }
+body.rtl .about-frame::after { left: auto; right: -8px; }
+body.rtl .experience-badge { right: auto; left: -15px; }
+body.rtl .about-more-content .about-text { border-left: none; border-right: 3px solid var(--orange-mid); padding-left: 0; padding-right: 15px; }
+body.rtl .hero-photo-frame { left: auto; right: 20px; }
+body.rtl .hero-photo-frame::after { right: auto; left: -8px; clip-path: polygon(100% 0, 0 100%, 0 0); }
+
+/* Studio */
+body.rtl .studio-card { text-align: center; }
+
+/* Partners - force LTR so CSS marquee scrolling works */
+body.rtl .partners-track-wrapper { direction: ltr; }
+body.rtl .partners-track { direction: ltr; }
+
+/* Videos - force LTR so translateX carousel works correctly */
+body.rtl .video-carousel { direction: ltr; }
+body.rtl .video-carousel-track { direction: ltr; }
+body.rtl .video-nav { direction: ltr; }
+
+/* Testimonials - force LTR on carousel mechanics, but keep RTL text inside cards */
+body.rtl .testimonial-carousel { direction: ltr; }
+body.rtl .testimonial-track { direction: ltr; }
+body.rtl .testimonial-card { direction: rtl; text-align: right; }
+body.rtl .testimonial-quote { left: auto; right: 25px; }
+body.rtl .testimonial-nav { direction: ltr; }
+
+/* Contact */
+body.rtl .contact-grid { direction: rtl; }
+body.rtl .contact-intro { text-align: right; }
+body.rtl .contact-item { text-align: right; }
+body.rtl .contact-item-label { text-align: right; }
+body.rtl .contact-social { justify-content: flex-start; }
+body.rtl .contact-form h3 { text-align: center; }
+
+/* Footer */
+body.rtl .footer-content { direction: rtl; }
+body.rtl .footer-links a:hover { padding-left: 0; padding-right: 5px; }
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    body.rtl .nav-links.active {
+        flex-direction: column;
+    }
+    body.rtl .nav-links.active .nav-link { text-align: right; }
+    body.rtl .top-bar-left { flex-direction: row-reverse; align-items: center; }
+    body.rtl .about-content .section-tag,
+    body.rtl .about-content .section-title { text-align: center; }
+    body.rtl .about-content { text-align: center; }
+}
+
+/* Mobile hero centering */
+@media (max-width: 1024px) {
+    body.rtl .hero-text { text-align: center; }
+    body.rtl .hero-cta { justify-content: center; }
+    body.rtl .hero-description { margin-left: auto; margin-right: auto; }
+}
